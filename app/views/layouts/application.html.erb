@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>mY aPP</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+   <header>
+    <div class="header-wrap">
+      <h1><%= link_to 'Main', root_path %></h1>
+      
+    </div>
+  </header>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div id="main-wrap">
+    <%= yield %>
+  </div>
+
+  <%= render 'layouts/user_widget' %>
+   <footer>
+    <p>Friends are the backbone of our lives!</p>
+  </footer>
+
+</body>
+</html>
+
+
+
